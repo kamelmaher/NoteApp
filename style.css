@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+}
+img {
+    position: absolute;
+    width: 700px;
+    z-index: 0;
+}
+.main {
+    z-index: 1;
+}
+h2 {
+    color: orange;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.main li {
+    list-style: none;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: blue;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+}
+.create-note , .my-notes , .note {
+    display: none; 
+    position: absolute;
+    top: 200px;
+    z-index: 20;
+}
+.create-note {
+    background-color: orange;
+    padding: 15px;
+    border-radius: 12px;
+}
+.create-note div:first-child {
+    margin-bottom: 8px;
+}
+.create-note label {
+    font-size: 20px;
+}
+.create-note input {
+    border: 0;
+    padding: 8px;
+    border-radius: 7px;
+}
+.create-note input:focus {
+    outline: 0;
+}
+.create-note textarea {
+    background-color: transparent;
+    border: 2px solid orange;
+    padding: 10px;
+    font-size: 15px;
+    background-color: white;
+    border-radius: 7px;
+}
+.create-note textarea:focus {
+    outline: 0;
+}
+.create-note button , .note button , .my-notes button {
+    padding: 10px;
+    background-color: white;
+    color: orange;
+    font-size: 14px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.create-note button:focus , .note button:focus {
+    border: 0;
+}
+.create-note.active {
+    display: block;
+}
+.my-notes {
+    background-color: #FFFB7D;
+    padding: 15px;
+    display: none;
+    min-width: 350px;
+    min-height: 300px;
+}
+.my-notes li {
+    list-style: none;
+    padding: 10px;
+    margin: 12px 0;
+    background-color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+.my-notes.active , .note.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.note {
+    min-width: 300px;
+    max-width: 400px;
+    height: 300px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 7px;
+    z-index: 21515154151;
+}
+.note h2 {
+    margin-bottom: 15px;
+}
+.note p {
+    font-weight: 500;
+    line-height: 1.4;
+    font-size: 18px;
+}
+.note button {
+    background-color: orange;
+    color: white;
+}
